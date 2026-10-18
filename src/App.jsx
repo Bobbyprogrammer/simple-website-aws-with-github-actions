@@ -1,11 +1,11 @@
-import { NavLink, Route, Routes } from 'react-router-dom'
-import './App.css'
+import { NavLink, Route, Routes } from "react-router-dom";
+import "./App.css";
 
 const pages = [
-  { to: '/', label: 'Home', end: true },
-  { to: '/about', label: 'About' },
-  { to: '/contact', label: 'Contact' },
-]
+  { to: "/", label: "Home", end: true },
+  { to: "/about", label: "About" },
+  { to: "/contact", label: "Contact" },
+];
 
 function Header() {
   return (
@@ -20,27 +20,36 @@ function Header() {
             key={to}
             to={to}
             end={end}
-            className={({ isActive }) => (isActive ? 'nav-link active' : 'nav-link')}
+            className={({ isActive }) =>
+              isActive ? "nav-link active" : "nav-link"
+            }
           >
             {label}
           </NavLink>
         ))}
       </nav>
     </header>
-  )
+  );
 }
 
 function Home() {
   return (
     <section className="page hero-page">
-      <p className="eyebrow">A simple React Router example</p>
-      <h1>Three pages.<br />One clean experience.</h1>
+      <p className="eyebrow"> Updated by A simple React Router example</p>
+      <h1>
+        Three pages.
+        <br />
+        One clean experience.
+      </h1>
       <p className="intro">
-        Use the navigation above to move between pages without a full browser refresh.
+        Use the navigation above to move between pages without a full browser
+        refresh.
       </p>
-      <NavLink className="button" to="/about">Learn more</NavLink>
+      <NavLink className="button" to="/about">
+        Learn more
+      </NavLink>
     </section>
-  )
+  );
 }
 
 function About() {
@@ -49,23 +58,27 @@ function About() {
       <p className="eyebrow">About</p>
       <h1>Built to stay simple.</h1>
       <p className="intro">
-        This small Vite app uses React Router for client-side navigation and plain CSS
-        for a lightweight, responsive design.
+        This small Vite app uses React Router for client-side navigation and
+        plain CSS for a lightweight, responsive design.
       </p>
       <div className="feature-grid">
         <article>
           <span>01</span>
           <h2>Fast navigation</h2>
-          <p>Pages update instantly without reloading the entire application.</p>
+          <p>
+            Pages update instantly without reloading the entire application.
+          </p>
         </article>
         <article>
           <span>02</span>
           <h2>Clear structure</h2>
-          <p>Each route maps to a focused page component that is easy to extend.</p>
+          <p>
+            Each route maps to a focused page component that is easy to extend.
+          </p>
         </article>
       </div>
     </section>
-  )
+  );
 }
 
 function Contact() {
@@ -76,9 +89,11 @@ function Contact() {
       <p className="intro">
         Have a question or an idea? Send a note and we’ll get back to you soon.
       </p>
-      <a className="button" href="mailto:hello@example.com">hello@example.com</a>
+      <a className="button" href="mailto:hello@example.com">
+        hello@example.com
+      </a>
     </section>
-  )
+  );
 }
 
 function App() {
@@ -94,7 +109,7 @@ function App() {
       </main>
       <footer>© 2026 Simple Studio</footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
